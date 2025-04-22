@@ -13,7 +13,7 @@ div {
     
 }
 
-h1{
+h1.title{
     text-transform: uppercase;
     text-align:center;
     letter-spacing: .1em;
@@ -21,7 +21,7 @@ h1{
     
 }
 
-h2{
+h2.title{
     text-transform: uppercase;
     text-align:center;
     letter-spacing: .25em;
