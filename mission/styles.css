@@ -3,6 +3,13 @@ body{
     font-family: 'Times New Roman', Times, serif;
     
 }
+.dark{
+    background-color: #333;
+    color: white;
+}
+.dark h2{
+    color: #4F9ACF
+}
 
 div {
     max-width: 600px;
@@ -13,7 +20,7 @@ div {
     
 }
 
-h1.title{
+h1{
     text-transform: uppercase;
     text-align:center;
     letter-spacing: .1em;
@@ -21,7 +28,7 @@ h1.title{
     
 }
 
-h2.title{
+h2{
     text-transform: uppercase;
     text-align:center;
     letter-spacing: .25em;
