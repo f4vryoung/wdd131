@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&family=Mooli&display=swap');
+
+:root {
+--primary-color: #e76f51;
+--secondary-color: #f4a261;
+--accent-color: #e9c46a;
+--text-dark: #264653;
+--text-light: #2a9d8f;
+--headline-font: Henny Penny, Arial, Helvetica, serif;
+--body-font: Mooli, sans-serif;
+}
+
+.skiptocontent a {
+	position:absolute;
+    top:-40px;
+    left: 0;
+    background-color: var(--primary-color);
+}
+.skiptocontent a:focus {
+    top:0;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding:20px;
+}
+
+body{
+    font-family: var(--body-font);
+    font-size: 1.2em;
+    margin: 0;
+    padding: 0;
+}
+
+.title h1{
+    font-family: var(--headline-font);
+    color: var(--text-dark);
+    font-size: 2.5em;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+nav{
+    border-top: solid 1px var(--secondary-color);
+    border-bottom: solid 1px var(--secondary-color);
+}
+.main_nav{
+    display: grid;
+    grid-template-columns: repeat(3, min-content);
+    list-style:none;
+    gap: 20px;
+    justify-content: end;
+    justify-items: end;
+    max-width: 90%;
+}
+
+.main_nav li a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+main {
+    padding:30px;
+    display: flex;
+    gap: 20px;
+}
+
+.center{
+    width:70%;
+}
+
+.center h2{
+    color: var(--primary-color);
+    font-family: var(--headline-font);
+}
+
+.book_image{
+    padding: 0 20px;
+}
+.search_box{
+    border: solid 1px var(--secondary-color);
+    width: 15%;
+}
