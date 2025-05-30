@@ -31,6 +31,7 @@ body{
     font-size: 1.2em;
     margin: 0;
     padding: 0;
+    line-height: 1.6;
 }
 
 .title h1{
@@ -40,6 +41,9 @@ body{
     padding: 20px;
     text-align: center;
     width: 100%;
+    line-height: 1.1;
+    margin-top: 0;
+    margin-bottom: 0.5em;
 }
 nav{
     border-top: solid 1px var(--secondary-color);
@@ -60,27 +64,70 @@ nav{
     color: var(--primary-color);
     font-weight: bold;
     font-size: 1.1em;
+    line-height: 1.5;
+    padding: 0.5em 0;
 }
 
 main {
     padding:30px;
+    display: flex; 
+    flex-direction: row; 
+    gap: 20px; 
+    align-items: flex-start; 
+}
+.wrapper{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 75%;
     display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.blog-article {
+    display:flex;
     gap: 20px;
+    align-items: flex-start;
+    padding:15px;
+    margin-bottom: 30px;
+    width: 100%;
 }
 
-.center{
-    width:70%;
+.blog-article .details {
+    text-align: right;
+    border-right: solid 1px var(--secondary-color);
+    padding-right: 10px;
+    line-height: 1.3;
+    flex-basis: 25%;
+    flex-shrink: 0;
 }
 
-.center h2{
+.blog-article .center{
+    padding-right: 20px;
+    line-height: 1.7;
+    flex-basis: 70%;
+    flex-grow: 1;
+}
+
+.blog-article .center h2 {
     color: var(--primary-color);
     font-family: var(--headline-font);
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    line-height: 1.2;
 }
-
-.book_image{
+.blog-article .center .book_image {
     padding: 0 20px;
+    text-align:center;
 }
-.search_box{
+.blog-article .center .book_image img {
+    max-width: 100%;
+    height: auto;
+}    
+
+.search_box {
     border: solid 1px var(--secondary-color);
-    width: 15%;
+    flex-basis: 20%;
+    flex-shrink: 0;
+    padding: 15px;
+    line-height: 1.5;
 }
