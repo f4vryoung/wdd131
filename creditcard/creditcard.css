@@ -1,0 +1,173 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+}
+
+.card{
+    width: 500px; 
+    height: 300px;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.card-front{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 2;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    padding: 20px 25px;
+    gap: 10px;
+    align-items: end;
+}
+
+#total{
+    grid-row: 1;
+    grid-column: 1; 
+    justify-self: start; 
+    align-self: start; 
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.card-image {
+    grid-row: 1;
+    grid-column: 2; 
+    justify-self: end; 
+    align-self: start; 
+    height: 55px;
+}
+
+.card-front label {
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #555; 
+  margin-bottom: 3px; 
+}
+
+.card-front label[for="cardNumber"] {
+    grid-row: 3; 
+    grid-column: 1/ span 2; 
+}
+
+.card-front input#cardNumber {
+    grid-row: 4;
+    grid-column: 1 / span 2; 
+    width: 100%;
+    font-size: 1.4em;
+    text-align: left;
+    padding: 2px;
+}
+
+.card-front label[for="cardHolder"] {
+    grid-row: 5; 
+    grid-column: 1; 
+   
+}
+
+.card-front input#cardHolder {
+    grid-row: 6;
+    grid-column: 1; 
+    width: 100%;
+    font-size: 1.1em;
+}
+
+.card-front label[for="cardExpires"] {
+    grid-row: 5;
+    grid-column: 2;
+    font-size: 1em;
+    justify-self: end;
+}
+
+.card-front .expiration-date-display {
+    grid-row: 6;
+    grid-column: 2;
+    justify-self: end;
+    display: flex;
+    gap: 5px;
+}
+
+.card-front select#expiresMonth,
+.card-front select#expiresYear {
+    width:fit-content;
+    font-size: 1em;
+    padding: 0;
+
+}
+
+.card-back{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-top: 10%;
+    margin-left: 25%;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.4);
+    position: relative;
+    padding-top: 20px;
+}
+
+.card-back::before {
+    content: ''; 
+    position: absolute;
+    top: 25px; 
+    left: 0;
+    width: 100%;
+    height: 50px; 
+    background-color: #000000; 
+    z-index: 1;
+}
+
+.card-back label[for="cvv"] {
+    position: absolute; 
+    bottom: 60px;
+    right: 40px;
+    color: #000000; 
+    font-size: 1em;
+    z-index: 3;
+    padding:5px;
+}
+
+.card-back input#cvv {
+    position: absolute; 
+    bottom: 25px; 
+    right: 25px; 
+    width: 90px; 
+    background-color: #ffffff; 
+    padding: 8px 10px;
+    border: 1px solid #000000;
+    font-size: 1em;
+    text-align: left; 
+    z-index: 3;
+}
+
+button{
+    background-color: lightgray;
+    width: 120px;
+    height:50px;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: 1em;
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    margin-top: 15px;
+}
+
+
