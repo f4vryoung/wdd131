@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Recipe Book">
+    <meta name="author" content="Jill Young">
+    <meta property="og:title" content="Recipe Book">
+    <meta property="og:type" content="index.html" />
+    <meta property="og:description" content="Collection of Family Recipes">
+    <meta property="og:image" content="images/apple-crisp.jpg">
+    <meta property="og:url" content="index.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Recipe Books</title>
+    <link rel="icon" type="image/x-icon" href="images/recipe-book.png">
+    <link rel="stylesheet" href="recipes.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <div class="page-wrapper">
+    <header>
+        <div class="logo-title">
+        <a href="index.html"> <img src="images/recipe-book.png" alt="My Recipe Book Logo">
+            <h1>Recipe Book</h1>
+        </a>
+    </div>
+    <form class="search-bar" action="/search" method="get" role="search">
+        <input type="search" id="recipe-search" name="query" placeholder="Find a recipe...">
+        <button type="submit"><img src="images/search.svg" alt="search"></button>
+    </form>
+    </header>    
+    
+    <main>
+        <section id="recipe-detail-section" class="recipe-detail-section">
+            <div id="recipe-container" class="recipe-container">
+                <div class="recipe-header-image">
+                    <img src="./images/sweet-potato-waffle-md.jpg"
+                         alt="Savory waffles made with Sweet potato with a hint of Ginger">
+                </div>
+                <div class="recipe-info">
+                    <ul class="tags">
+                        <li>Waffles</li>
+                        <li>Sweet Potato</li>
+                        <li>Side</li>
+                    </ul>
+                    <h2>Sweet Potato Waffles</h2>
+                    <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star">⭐</span>
+                        <span aria-hidden="true" class="icon-star-empty">☆</span>
+                    </span>
+                </div>        
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="social">
+            <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+            <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+            <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+            <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+        </div>
+        <div class="attribute">
+            <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+        </div>
+    </footer>
+    </div>
+</body>
+</html>
