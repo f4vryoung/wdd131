@@ -14,7 +14,7 @@
     <title>Recipe Books</title>
     <link rel="icon" type="image/x-icon" href="images/recipe-book.png">
     <link rel="stylesheet" href="recipes.css">
-    <script src="main.js" defer></script>
+    <script src="main.js" type="module" defer></script>
 </head>
 <body>
     <div class="page-wrapper">
@@ -26,33 +26,13 @@
     </div>
     <form class="search-bar" action="/search" method="get" role="search">
         <input type="search" id="recipe-search" name="query" placeholder="Find a recipe...">
-        <button type="submit"><img src="images/search.svg" alt="search"></button>
+        <button type="submit" id="search-button"><img src="images/search.svg" alt="search"></button>
     </form>
     </header>    
     
     <main>
         <section id="recipe-detail-section" class="recipe-detail-section">
-            <div id="recipe-container" class="recipe-container">
-                <div class="recipe-header-image">
-                    <img src="./images/sweet-potato-waffle-md.jpg"
-                         alt="Savory waffles made with Sweet potato with a hint of Ginger">
-                </div>
-                <div class="recipe-info">
-                    <ul class="tags">
-                        <li>Waffles</li>
-                        <li>Sweet Potato</li>
-                        <li>Side</li>
-                    </ul>
-                    <h2>Sweet Potato Waffles</h2>
-                    <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star">⭐</span>
-                        <span aria-hidden="true" class="icon-star-empty">☆</span>
-                    </span>
-                </div>        
-            </div>
+            
         </section>
     </main>
     
