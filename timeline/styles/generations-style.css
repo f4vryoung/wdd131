@@ -1,0 +1,266 @@
+/* --- Generations Page Layout --- */
+.generations-grid {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+}
+
+.generation-column {
+    background-color: var(--accent1-color);
+    border-radius: 8px;
+    padding: 1.5em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.generation-title {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1em;
+    line-height: 1.2;
+    color: #2f3262; /* Updated color */
+}
+
+/* --- Ancestor Cards --- */
+.ancestor-card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.ancestor-card {
+    text-align: center;
+    padding: 1em;
+    border-radius: 6px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.ancestor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.ancestor-card img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%; 
+    border: 2px solid var(--accent1-color);
+    margin-bottom: 0.5em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ancestor-card h3 {
+    margin: 0.2em 0;
+    font-size: 1.2em;
+    
+}
+
+.ancestor-card p {
+    font-size: 0.9em;
+    color: #666;
+    margin: 0;
+}
+
+/* --- Ancestor Profile Modal --- */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 100; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0, 0, 0, 0.8); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 2em;
+    border: 1px solid #888;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 900px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.close-button {
+    color: #aaa;
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.profile-main {
+    padding: 1.5em;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Profile Grid Layout --- */
+.profile-layout-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2em;
+    margin-top: 2em;
+}
+
+.profile-photo {
+    text-align: center;
+}
+
+.profile-photo img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    aspect-ratio: 3/4;
+}
+
+.profile-facts ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#bio-text {
+    white-space: pre-wrap;
+    background-color: var(--accent1-color);
+    padding: 1.5em;            
+    border-radius: 8px;        
+    margin-bottom: 1.5em;     
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+}
+
+.profile-sources {
+    grid-area: sources;
+    text-align:left;
+}
+.timeline-item .timeline-year {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.profile-sources h3 {
+    text-align: left;
+}
+
+#sources-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+#sources-list li {
+    margin-bottom: 0.5em;
+    padding: 0;
+}
+
+#sources-list a {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    text-decoration: none;
+    color: #333;
+    padding: 0;
+    margin: 0;
+}
+
+#sources-list a img {
+    width: 20px;
+    height: auto;
+    float: none;
+    padding: 0;
+    margin: 0;
+    aspect-ratio: 1/1;
+}
+
+
+
+/* --- Document Viewer Modal --- */
+.document-viewer {
+    width: 90%;
+    max-width: 800px;
+}
+
+.document-content {
+    text-align: center;
+    padding:0;
+}
+
+.document-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    aspect-ratio: 1/1.414;
+}
+
+.close-document-button {
+    color: #aaa;
+    float: right;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    line-height: 1;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+/* --- Responsive Media Queries --- */
+@media (min-width: 768px) {
+    .generations-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .profile-layout-grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "photo facts"
+            "bio bio"
+            "timeline sources";
+    }
+
+    .grid-area-photo { grid-area: photo; }
+    .grid-area-facts { grid-area: facts; }
+    .grid-area-bio { grid-area: bio; }
+    .grid-area-timeline { grid-area: timeline; }
+    .grid-area-sources { grid-area: sources; }
+}
+
+@media (min-width: 1024px) {
+    .profile-layout-grid {
+        grid-template-columns: 1fr 1.5fr 1.5fr;
+        grid-template-areas:
+            "photo facts facts"
+            "bio bio bio"
+            "timeline timeline sources";
+    }
+}
+

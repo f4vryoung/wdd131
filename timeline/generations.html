@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Genealogy Timeline and Profiles">
+    <meta name="author" content="Jill Young">
+    <meta property="og:title" content="Our Family">
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Ancestors' Stories Come to Life">
+    <meta property="og:image" content="images/book.jpg">
+    <meta property="og:url" content="index.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Generations</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/generations-style.css">
+    <script src="generations.js" type="module" defer></script>
+    <script src="footer.js" type="module" defer></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <a href="index.html">
+            <img src="images/logo_header.png" alt="Timeline Tales Logo" class="main-logo">
+            </a>
+        </div>
+        <h1>Our Family Story</h1>
+        <p>Explore the lives of our ancestors, generation by generation.</p>
+    </header>
+
+<main class="generations-grid">
+        <section class="generation-column">
+            
+            <h2 class="generation-title">Generation One</h2>
+            <div class="ancestor-card-container" id="generation-1-cards">
+                </div>
+        </section>
+
+        <section class="generation-column">
+            <h2 class="generation-title">Generation Two</h2>
+            <div class="ancestor-card-container" id="generation-2-cards">
+                </div>
+        </section>
+        
+        <section class="generation-column">
+            <h2 class="generation-title">Generation Three</h2>
+            <div class="ancestor-card-container" id="generation-3-cards">
+                </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <nav class="footer-nav">
+                <a href="https://f4vryoung.github.io/wdd130/ForeverYoung/index.html"><img src="images/fyg_logo.jpg" alt="Logo for Forever Young Genealogy"></a>
+                <a href="index.html">Home</a> |
+                <a href="#" id="contact-link">Contact Us</a> |
+                <a href="#" id="privacy-link">Privacy Policy</a> |
+                <a href="#" id="terms-link">Terms of Service</a>
+            
+                <div class="social-links">
+                    <a href="https://www.facebook.com" aria-label="Facebook"><img src="images/facebook.png" alt="Facebook"></a>
+                    <a href="https://www.instagram.com" aria-label="Instagram"><img src="images/instagram.png" alt="Instagram"></a>
+                </div>
+            </nav>
+            <div class="footer-info">
+                <p class="copyright">&copy; 2025 Forever Young Genealogy. All rights reserved.</p>
+                <a href="https://www.flaticon.com/free-icons/document" title="document icons">Document icons created by Awicon - Flaticon</a>
+                <a href="https://www.flaticon.com/free-icons/person" title="person icons">Person icons created by spaceman.design - Flaticon</a>
+
+            </div>
+        </div>
+    </footer>
+
+<div id="ancestor-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <main class="profile-container">
+            <header class="profile-header">
+                <h2 id="ancestor-name"></h2>
+                <p class="lifespan"><span id="lifespan-birth-date"></span> – <span id="lifespan-death-date"></span></p>
+            </header>
+
+            <div class="profile-layout-grid">
+                <section class="profile-bio grid-area-bio">
+                    <h3>Biography</h3>
+                    <p id="bio-text"></p>
+                </section>
+
+                <div class="profile-photo grid-area-photo">
+                    <div class="profile-image-container">
+                        <img id="profile-photo" src="" alt="Profile picture of ancestor">
+                        <p id="no-photo-message" class="empty-message" style="display: none;">Photo not available.</p>
+                    </div>
+                </div>
+
+                <section class="profile-facts grid-area-facts">
+                    <h3>Key Facts</h3>
+                    <ul>
+                        <li><strong class="fact-label">Born:</strong> <span id="fact-birth-date"></span></li>
+                        <li><strong class="fact-label">Died:</strong> <span id="fact-death-date"></span></li>
+                        <li id="fact-residence" style="display: none;"><strong class="fact-label">Residence:</strong> <span id="residence-location"></span></li>
+                    </ul>
+                        
+                    <h3>Marriage</h3>
+                        <ul id="marriage-list"></ul>
+                        <p id="no-marriage-message" class="empty-message" style="display: none;"></p>
+                    <h3>Children</h3>
+                        <ul id="children-list"></ul>
+                        <p id="no-children-message" class="empty-message" style="display: none;">No children listed.</p>
+                </section>
+                
+                <section class="profile-timeline grid-area-timeline">
+                    <h3>Life Events</h3>
+                    <div class="timeline-wrapper">
+                        <p id="no-timeline-message" class="empty-message" style="display: none;">No major life events recorded.</p>
+                    </div>
+                </section>
+                
+                <section class="profile-sources grid-area-sources">
+                    <h3>Sources</h3>
+                    <ul id="sources-list"></ul>
+                    <p id="no-sources-message" class="empty-message" style="display: none;">No sources listed.</p>
+                </section>
+            </div>    
+        
+        </main>
+    </div>
+</div>
+
+<div id="document-modal" class="modal">
+    <div class="modal-content document-viewer">
+        <span class="close-document-button">&times;</span>
+        <div class="document-content">
+            <img id="document-image" src="" alt="Source Document">
+        </div>
+    </div>
+</div>
+
+<div id="contact-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button contact-close-button">&times;</span>
+        <h2>Contact Us</h2>
+        <p>This is placeholder content for the contact information.</p>
+    </div>
+</div>
+
+<div id="privacy-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button privacy-close-button">&times;</span>
+        <h2>Privacy Policy</h2>
+        <p>This is placeholder content for the privacy policy.</p>
+    </div>
+</div>
+
+<div id="terms-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-button terms-close-button">&times;</span>
+        <h2>Terms of Service</h2>
+        <p>This is placeholder content for the terms of service.</p>
+    </div>
+</div>
+
+</body>
+</html>
